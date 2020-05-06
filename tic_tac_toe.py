@@ -10,8 +10,8 @@ def printBoard(board):
     print(" | {} | {} | {} |".format(board['m-l'],board['m-m'],board['m-r']))
     print(" ------------- ")
     print(" | {} | {} | {} |".format(board['b-l'],board['b-m'],board['b-r']))
-#Checks to see if someone has 3 in a row. 
 
+#Checks to see if someone has 3 in a row. 
 def checkThree(board):
     #Check horizontals
     if board['t-l'] == board['t-m'] == board['t-r'] != ' ':
@@ -77,15 +77,15 @@ def pcpicks(board):
 #Sets up the starting board
 def newBoard():
     board = {
-        't-l': ' ',
-        't-m': ' ',
-        't-r': ' ',
-        'm-l': ' ',
-        'm-m': ' ',
-        'm-r': ' ',
-        'b-l': ' ',
-        'b-m': ' ',
-        'b-r': ' ',
+        't-l': ' ', #1
+        't-m': ' ', #2
+        't-r': ' ', #3
+        'm-l': ' ', #4
+        'm-m': ' ', #5
+        'm-r': ' ', #6
+        'b-l': ' ', #7
+        'b-m': ' ', #8
+        'b-r': ' ', #9
     }
     return board
 
@@ -99,10 +99,10 @@ def startGame():
         if i % 2 == 1:       #Alternate turns between Player and PC. Player goes first.
             while True:                    
                 try:
-                    userChoice = int(input("Choose a spot on the board, options are: " + str(possibleChoices(board)) + " "))
+                    userChoice = int(input("Choose a spot on the board, options are: " + str(availableChoices) + " "))
                     validChoice = userChoice in availableChoices
                     while validChoice == False:
-                        userChoice = int(input("Not a empty spot, try again. Options are: " + str(possibleChoices(board)) + " "))
+                        userChoice = int(input("Not a empty spot, try again. Options are: " + str(availableChoices) + " "))
                         validChoice = userChoice in availableChoices
                     break
                 except ValueError:
