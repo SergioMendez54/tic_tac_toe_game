@@ -102,7 +102,7 @@ def startGame():
                     userChoice = int(input("Choose a spot on the board, options are: " + str(availableChoices) + " "))
                     validChoice = userChoice in availableChoices
                     while validChoice == False:
-                        userChoice = int(input("Not a empty spot, try again. Options are: " + str(availableChoices) + " "))
+                        userChoice = int(input("Not an empty spot, try again. Options are: " + str(availableChoices) + " "))
                         validChoice = userChoice in availableChoices
                     break
                 except ValueError:
