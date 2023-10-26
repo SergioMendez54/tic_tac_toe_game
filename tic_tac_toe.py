@@ -106,6 +106,7 @@ def startGame():
                         validChoice = userChoice in availableChoices
                     break
                 except ValueError:
+                    #Error handling when player enters a number that is not 1-9
                     print("Not a valid choice, try again.")
                     
             print("Great choice, adding 'X' to #" + str(userChoice))
