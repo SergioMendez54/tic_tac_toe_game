@@ -5,11 +5,11 @@ import random
 
 #Function to print the board to the Command Line.
 def printBoard(board):
-    print(" | {} | {} | {} |".format(board['t-l'],board['t-m'],board['t-r']))
+    print(f" | {board['t-l']} | {board['t-m']} | {board['t-r']} |")
     print(" ------------- ")
-    print(" | {} | {} | {} |".format(board['m-l'],board['m-m'],board['m-r']))
+    print(f" | {board['m-l']} | {board['m-m']} | {board['m-r']} |")
     print(" ------------- ")
-    print(" | {} | {} | {} |".format(board['b-l'],board['b-m'],board['b-r']))
+    print(f" | {board['b-l']} | {board['b-m']} | {board['b-r']} |")
 
 #Checks to see if someone has 3 in a row. 
 def checkThree(board):
