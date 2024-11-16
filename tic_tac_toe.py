@@ -137,13 +137,13 @@ def startGame():
 playAgain = True
 
 name = input("Hi, what is your name?\n")
-print("\nHi {}, let's play tic tac toe.".format(name))
+print(f"\nHi {name}, let's play tic tac toe.")
 
 while playAgain:     #starts the game once and then restarts as long as player wants to continue. 
     startGame()
     while True:
         try:
-            nextPlay = (input("Would you like to play again {0}? Enter yes or no. ".format(name)))
+            nextPlay = (input(f"Would you like to play again {name}? Enter yes or no. "))
             nextPlay = nextPlay.lower()
             if nextPlay == "yes":
                 break
