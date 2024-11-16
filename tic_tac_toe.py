@@ -142,18 +142,15 @@ print(f"\nHi {name}, let's play tic tac toe.")
 while playAgain:     #starts the game once and then restarts as long as player wants to continue. 
     startGame()
     while True:
-        try:
-            nextPlay = (input(f"Would you like to play again {name}? Enter yes or no. "))
-            nextPlay = nextPlay.lower()
-            if nextPlay == "yes":
-                break
-            elif nextPlay == "no":
-                playAgain = False
-                break
-            else:
-                print("Not a valid choice, try again.")
-        except ValueError:
+        nextPlay = input(f"Would you like to play again {name}? Enter yes or no. ").lower()
+        if nextPlay == "yes" or nextPlay == 'y':
+            break
+        elif nextPlay == "no" or nextPlay == 'n':
+            playAgain = False
+            break
+        else:
             print("Not a valid choice, try again.")
+
 #Exiting the game
 input("Press Enter to exit.")
 
